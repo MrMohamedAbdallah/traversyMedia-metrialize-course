@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css//dist/css/materialize.min.css"
+    />
+    <title>CSS Components</title>
+  </head>
+  <body>
+    <div class="container">
+      
+        <button class="btn-floating btn-large waves-effect waves-purple">
+            <i class="material-icons">add</i>
+        </button>
+        <button class="btn-floating blue btn-large waves-effect waves-purple">
+            <i class="material-icons">add</i>
+        </button>
+        <button class="btn-floating green pulse btn-large waves-effect waves-purple">
+            <i class="material-icons">publish</i>
+        </button>
+
+        <!-- <div class="fixed-action-btn">
+          <butotn class="btn-floating btn-large red">
+            <i class="material-icons">add</i>
+          </butotn>
+        </div> -->
+        
+        
+        <div class="fixed-action-btn toolbar ">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating"><i class="material-icons">attach_file</i></a></li>
+            <li><a class="btn-floating"><i class="material-icons">close</i></a></li>
+          </ul>
+        </div>
+              
+              
+
+
+
+
+
+    </div>
+    
+
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+      var instances;
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    let options = {
+      "toolbarEnabled": true,
+    }
+    instances = M.FloatingActionButton.init(elems, options);
+  });    
+  
+  document.addEventListener("click", ()=>{
+    instances.close(); 
+  })
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css//dist/css/materialize.min.css"
+    />
+    <title>CSS Components</title>
+  </head>
+  <body>
+    
+    
+    <div class="container">
+
+        <ul class="collection">
+            <li class="collection-item">First Item</li>
+            <li class="collection-item">Second Item</li>
+            <li class="collection-item">Third Item</li>
+            <li class="collection-item">Fourth Item</li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="collection">
+            <a href="#" class="collection-item">Link</a>
+            <a href="#" class="collection-item">Link</a>
+            <a href="#" class="collection-item">Link</a>
+            <a href="#" class="collection-item">Link</a>
+            
+            <a href="#" class="collection-item">
+                Link <span class="badge">3</span>
+            </a>
+            <a href="#" class="collection-item">
+                Link <span class="badge new">3</span>
+            </a>
+        
+        </div>
+
+        <br>
+        <br>
+
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h4>Collection header</h4>
+            </li>
+            <li class="collection-item">Item</li>
+            <li class="collection-item">Item</li>
+            <li class="collection-item">Item</li>
+            <li class="collection-item">Item</li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h5>Collection Header</h5>
+            </li>
+            <li class="collection-item">
+                <div>
+                    collection
+                    <a href="#" class="secondary-content">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    collection
+                    <a href="#" class="secondary-content">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    collection
+                    <a href="#" class="secondary-content">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <i class="material-icons blue circle">contacts</i>
+                <span class="title">John Doe</span>
+                <p>
+                    jdoe@gmail.com
+                    <br>
+                    555-555-55
+                </p>
+                <a href="#" class="secondary-content">
+                    <i class="material-icons">grade</i>
+                </a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons blue circle">contacts</i>
+                <span class="title">John Doe</span>
+                <p>
+                    jdoe@gmail.com
+                    <br>
+                    555-555-55
+                </p>
+                <a href="#" class="secondary-content">
+                    <i class="material-icons">grade</i>
+                </a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons blue circle">contacts</i>
+                <span class="title">John Doe</span>
+                <p>
+                    jdoe@gmail.com
+                    <br>
+                    555-555-55
+                </p>
+                <a href="#" class="secondary-content">
+                    <i class="material-icons">grade</i>
+                </a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons blue circle">contacts</i>
+                <span class="title">John Doe</span>
+                <p>
+                    jdoe@gmail.com
+                    <br>
+                    555-555-55
+                </p>
+                <a href="#" class="secondary-content">
+                    <i class="material-icons">grade</i>
+                </a>
+            </li>
+        </ul>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <span class="btn dropdown-trigger" data-target="dropdown-1">
+            Dropdown
+            <i class="material-icons">arrow_drop_down</i>
+        </span>
+         <ul class="dropdown-content" id="dropdown-1">
+             <li><a href="">Item 1</a></li>
+             <li><a href="">Item 2</a></li>
+             <li><a href="">Item 3</a></li>
+             <li><a href="">Item 4</a></li>
+         </ul>
+
+    </div>
+
+    
+    
+    <div style="height: 500px;"></div>
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(elems, {});
+        });
+    </script>
+  </body>
+</html>
