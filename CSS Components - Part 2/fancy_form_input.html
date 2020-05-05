@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>CSS Components - Part 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col m6 s12 offset-m3">
+          <form>
+            <div class="switch">
+              <label>
+                Disabled
+                <input type="checkbox" checkbox />
+                <span class="lever"></span>
+                Enabled
+              </label>
+            </div>
+
+            <div class="input-field file-field">
+              <div class="btn">
+                <span>Upload File</span>
+                <input type="file" />
+              </div>
+              <div class="file-path-wrapper">
+                <input type="text" class="file-path" />
+              </div>
+            </div>
+
+
+            <div class="range-field">
+                <input type="range" min="0" max="10">
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="date">
+                <label for="date">Date</label>
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="time">
+                <label for="time">Time</label>
+            </div>
+
+
+            <div class="input-field">
+                <input type="text" class="counter_text" data-length="20">
+                <label>Text</label>
+            </div>
+
+
+            <div class="input-field">
+                <input type="text" id="auto" class="autocomplete">
+                <label for="auto">Autocomplete</label>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('#date');
+            var instances = M.Timepicker.init(elems, {
+                autoClose: true
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('#time');
+            var instances = M.Timepicker.init(elems, {
+                twelveHour: false
+            });
+        });
+
+        // Counter
+        document.addEventListener('DOMContentLoaded', function () {
+            let textNeedCount = document.querySelectorAll('.counter_text');
+            M.CharacterCounter.init(textNeedCount);
+        });
+
+        // Autocomplete
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems, {
+                data: {
+                    "PHP": null,
+                    "Nodejs": null,
+                    "Python": null,
+                    "Python2": null,
+                },
+                limit: 2
+            });
+        });
+
+    </script>
+  </body>
+</html>
