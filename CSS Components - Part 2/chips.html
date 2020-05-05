@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>CSS Components - Part 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col m8 s12 offset-m2">
+          <!-- TABLE -->
+          
+          <span class="chip white-text indigo">
+              Programming
+                <i class="material-icons close">close</i>
+            </span>
+          <span class="chip white-text indigo darken-1">
+              Gaming
+                <i class="material-icons close">close</i>
+            </span>
+          <span class="chip white-text indigo darken-2">
+              Fun
+                <i class="material-icons close">close</i>
+            </span>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <span class="chip blue white-text">
+                <img src="images/aerial-photography-aerial-shot-beach-1936936.jpg"> John Doe
+                <i class="material-icons close">close</i>
+            </span>
+            <span class="chip">
+                <img src="images/pexels-photo-220444.jpeg"> Jane Doe
+                <i class="material-icons close">close</i>
+            </span>
+            <span class="chip">
+                <img src="images/pexels-photo-994605.jpeg"> John Smith
+                <i class="material-icons close">close</i>
+            </span>
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="chips">
+                
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+
+            <ul class="pagination center-align">
+                <li class="disabled">
+                    <a href="#">
+                        <i class="material-icons">chevron_left</i>
+                    </a>
+                </li>
+                <li class="waves-effect">
+                    <a href="#">1</a>
+                </li>
+                <li class="waves-effect">
+                    <a href="#">2</a>
+                </li>
+                <li class="active indigo">
+                    <a href="#">3</a>
+                </li>
+                <li class="waves-effect">
+                    <a href="#">4</a>
+                </li>
+                <li class="waves-effect">
+                    <a href="#">
+                        <i class="material-icons">chevron_righte</i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.chips');
+                var instances = M.Chips.init(elems, {
+                    data: [
+                        {tag: "Programming"},
+                        {tag: "Gaming"},
+                        {tag: "Fun"},
+                        {tag: "Geek"},
+                    ],
+                    placeholder: "Add your own",
+                    secondaryPlaceholder: "Add more",
+                    limit: 6
+                });
+            });
+    </script>
+  </body>
+</html>
