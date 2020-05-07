@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components</title>
+  </head>
+  <body style="padding: 200px 0px;">
+    <ul class="collapsible" data-collapasible="accordion">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i> First
+        </div>
+        <div class="collapsible-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            iusto repudiandae provident, nihil alias quo animi fugiat delectus
+            quae maiores?
+          </p>
+        </div>
+      </li>
+      <li class="active">
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i> First
+        </div>
+        <div class="collapsible-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            iusto repudiandae provident, nihil alias quo animi fugiat delectus
+            quae maiores?
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i> First
+        </div>
+        <div class="collapsible-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            iusto repudiandae provident, nihil alias quo animi fugiat delectus
+            quae maiores?
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i> First
+        </div>
+        <div class="collapsible-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            iusto repudiandae provident, nihil alias quo animi fugiat delectus
+            quae maiores?
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.collapsible');
+          var instances = M.Collapsible.init(elems, {accordion: false});
+        });
+
+    </script>
+  </body>
+</html>

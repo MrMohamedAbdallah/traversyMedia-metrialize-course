@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Interactive Components</title>
+</head>
+<body style="padding: 200px 0px;">
+
+    <div class="carousel">
+        <a href="#one" class="carousel-item">
+            <img src="images/aerial-photography-aerial-shot-beach-1936936.jpg" alt="">
+        </a>
+        <a href="#two" class="carousel-item">
+            <img src="images/ai-artificial-intelligence-codes-247791.jpg" alt="">
+        </a>
+        <a href="#three" class="carousel-item">
+            <img src="images/pexels-photo-220444.jpeg" alt="">
+        </a>
+        <a href="#four" class="carousel-item">
+            <img src="images/pexels-photo-994605.jpeg" alt="">
+        </a>
+    </div>
+    
+    
+    <div class="carousel carousel-slider">
+        <a href="#one" class="carousel-item">
+            <img src="images/aerial-photography-aerial-shot-beach-1936936.jpg" alt="">
+        </a>
+        <a href="#two" class="carousel-item">
+            <img src="images/ai-artificial-intelligence-codes-247791.jpg" alt="">
+        </a>
+        <a href="#three" class="carousel-item">
+            <img src="images/pexels-photo-220444.jpeg" alt="">
+        </a>
+        <a href="#four" class="carousel-item">
+            <img src="images/pexels-photo-994605.jpeg" alt="">
+        </a>
+    </div>
+    
+
+    <!-- Content slider -->
+    <div class="carousel carousel-slider center">
+        <div href="#done" class="carousel-item red white-text">
+            <h2>Panel One</h2>
+            <p>Panel one paragraph</p>
+            <div class="carousel-fixed-item center">
+                <a class="btn black">Button</a>
+            </div>
+        </div>
+        <div href="#dtwo" class="carousel-item indigo white-text">
+            <h2>Panel two</h2>
+            <p>Panel two paragraph</p>
+            <div class="carousel-fixed-item center">
+                <a class="btn black">Button</a>
+            </div>
+        </div>
+        <div href="#dthree" class="carousel-item blue white-text">
+            <h2>Panel three</h2>
+            <p>Panel three paragraph</p>
+            <div class="carousel-fixed-item center">
+                <a class="btn black">Button</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true
+            });
+        });
+
+    </script>
+</body>
+</html>
