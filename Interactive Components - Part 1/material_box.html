@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components</title>
+  </head>
+  <body style="padding: 200px 0px;">
+    
+
+   
+    <div class="row">
+        <div class="col s12 m6">
+            <img src="images/aerial-photography-aerial-shot-beach-1936936.jpg" class="materialboxed" width="100%">
+        </div>
+        <div class="col s12 m6 mt-1">
+            <img src="images/ai-artificial-intelligence-codes-247791.jpg" 
+                 class="materialboxed" 
+                 data-caption="The caption for the image"
+                 width="100%">
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="images/aerial-photography-aerial-shot-beach-1936936.jpg">
+                <div class="caption left-align">
+                    <h3>The caption title</h3>
+                    <h6>Subtitle for the catption</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, expedita!</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/ai-artificial-intelligence-codes-247791.jpg">
+                <div class="caption center-align">
+                    <h3>The caption title</h3>
+                    <h6>Subtitle for the catption</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, expedita!</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/pexels-photo-220444.jpeg">
+                <div class="caption left-align">
+                    <h3>The caption title</h3>
+                    <h6>Subtitle for the catption</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, expedita!</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems, {});
+        });
+
+        // Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, {});
+        });
+
+    </script>
+  </body>
+</html>

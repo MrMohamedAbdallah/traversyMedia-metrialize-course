@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components</title>
+  </head>
+  <body style="padding: 200px 0px;">
+    
+
+    <button id="btn0" class="btn">Toast</button>
+    <button id="btn1" class="btn indigo">Toast</button>
+    <button id="btn2" class="btn blue">Toast</button>
+
+
+    <br>
+    <br>
+    <br>
+
+    <button class="btn tooltipped indigo darken-1" 
+            data-position="top"
+            data-tooltip="The tooltip data">
+        ToolTip
+    </button>
+    <button class="btn tooltipped indigo darken-2" 
+            data-position="right"
+            data-tooltip="The tooltip data">
+        ToolTip
+    </button>
+    <button class="btn tooltipped indigo darken-3" 
+            data-position="bottom"
+            data-tooltip="The tooltip data">
+        ToolTip
+    </button>
+    <button class="btn tooltipped indigo darken-4" 
+            data-position="left"
+            data-tooltip="The tooltip data">
+        ToolTip
+    </button>
+
+
+
+
+
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+        let counter = 1;
+        document.querySelector("#btn0").addEventListener("click", ()=>{
+            M.toast({html: "Some Toast " + counter++, displayLength: 500}, 100);
+        })
+        document.querySelector("#btn1").addEventListener("click", ()=>{
+            M.toast({html: "Some Toast 2"}, 100);
+        })
+        document.querySelector("#btn2").addEventListener("click", ()=>{
+            M.toast({
+                html: "Some Toast 3 <i class='material-icons'>edit</i>",
+                rounded: true,
+                classes: 'rounded indigo'
+            });
+        })
+
+        // Tooltip initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(elems, {});
+        });
+
+    </script>
+  </body>
+</html>

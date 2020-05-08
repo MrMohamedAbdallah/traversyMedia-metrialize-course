@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components</title>
+  </head>
+  <body style="padding: 200px 0px;">
+    <button data-target="modal0" class="btn indigo modal-trigger">
+      Show modal
+    </button>
+    <button data-target="modal1" class="btn indigo darken-4 modal-trigger">
+      Show modal
+    </button>
+
+    <div id="modal0" class="modal">
+      <div class="modal-content">
+        <h1>Modal Header</h1>
+        <h6>Modal sub-header</h6>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+          expedita!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn">For nothing</button>
+      </div>
+    </div>
+
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h1>Modal Header</h1>
+        <h6>Modal sub-header</h6>
+        <p>
+          Lorem ipsum dolor
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn modal-action modal-close">For nothing</button>
+      </div>
+    </div>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".modal");
+        var instances = M.Modal.init(elems, {});
+      });
+    </script>
+  </body>
+</html>
