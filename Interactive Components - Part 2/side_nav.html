@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components - Part 2</title>
+  </head>
+  <body style="padding: 200px 0px;">
+    
+
+    <ul class="sidenav" id="slide-out">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/image (3).jpg">
+                </div>
+                <a href="#">
+                    <img src="images/image (4).jpg"  class="circle">
+                </a>
+                <a href="#">
+                    <span class="white-text name">John Doe</span>
+                </a>
+                <a href="#">
+                    <span class="white-text email">john@example.com</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="#!">
+                <i class="material-icons">dashboard</i>
+                Dashboard
+            </a>
+        </li>
+        <li>
+            <a href="#!">Posts</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a href="#!" class="logo waves-effect">Logout</a>
+        </li>
+    </ul>
+
+    <button class="btn sidenav-trigger waves-effect" data-target="slide-out">
+        <i class="material-icons">menu</i>
+    </button>
+
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {
+                edge: 'right'
+            });
+        });
+    </script>
+  </body>
+</html>

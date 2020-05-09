@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components - Part 2</title>
+
+    <style></style>
+  </head>
+  <body style="padding: 200px 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col">
+              <a href="#tab1" class="waves-effect">Tab 1</a>
+            </li>
+            <li class="tab col">
+              <a href="#tab2" class="waves-effect">Tab 2</a>
+            </li>
+            <li class="tab col">
+              <a href="#tab3" class="waves-effect">Tab 3</a>
+            </li>
+            <li class="tab col">
+              <a href="#tab4" class="waves-effect">Tab 4</a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="tab1" class="col s12">
+          <h3>Tab 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            laboriosam hic iste adipisci autem cumque numquam quas mollitia
+            neque, dolorem inventore officiis recusandae, deserunt culpa nisi in
+            rem earum obcaecati.
+          </p>
+        </div>
+        <div id="tab2" class="col s12">
+          <h3>Tab 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            laboriosam hic iste adipisci autem cumque numquam quas mollitia
+            neque, dolorem inventore officiis recusandae, deserunt culpa nisi in
+            rem earum obcaecati.
+          </p>
+        </div>
+        <div id="tab3" class="col s12">
+          <h3>Tab 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            laboriosam hic iste adipisci autem cumque numquam quas mollitia
+            neque, dolorem inventore officiis recusandae, deserunt culpa nisi in
+            rem earum obcaecati.
+          </p>
+        </div>
+        <div id="tab4" class="col s12">
+          <h3>Tab 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            laboriosam hic iste adipisci autem cumque numquam quas mollitia
+            neque, dolorem inventore officiis recusandae, deserunt culpa nisi in
+            rem earum obcaecati.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <ul id="tabs-swipe-demo" class="tabs">
+          <li class="col tab">
+            <a href="#tab-swap-1">Test 1</a>
+          </li>
+          <li class="col tab">
+            <a href="#tab-swap-2">Test 2</a>
+          </li>
+          <li class="col tab">
+            <a href="#tab-swap-3">Test 3</a>
+          </li>
+          <li class="col tab">
+            <a href="#tab-swap-4">Test 4</a>
+          </li>
+        </ul>
+
+        <div id="tab-swap-1" class="col s12 indigo darken-1">Content Swap 1</div>
+        <div id="tab-swap-2" class="col s12 indigo darken-2">Content Swap 2</div>
+        <div id="tab-swap-3" class="col s12 indigo darken-3">Content Swap 3</div>
+        <div id="tab-swap-4" class="col s12 indigo darken-4">Content Swap 4</div>
+      </div>
+    </div>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+      var instance = M.Tabs.init(document.querySelectorAll(".tabs"), {});
+
+      var instance = M.Tabs.init(document.querySelectorAll("#tabs-swipe-demo"), {
+          swipeable: true
+      });
+    </script>
+  </body>
+</html>

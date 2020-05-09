@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Interactive Components - Part 2</title>
+  </head>
+  <body style="padding: 200px 0px;">
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="images/image (1).jpg" />
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <h3>Hello</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eum
+            dolore quod perferendis, ratione modi quia reiciendis distinctio
+            dolorum aspernatur nulla, ab molestiae eos iusto cupiditate totam
+            officia cum obcaecati.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="images/image (2).jpg" alt="" />
+      </div>
+    </div>
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".parallax");
+        var instances = M.Parallax.init(elems, {});
+      });
+    </script>
+  </body>
+</html>
