@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Travelville</title>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar-fixed">
+      <nav class="teal">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">Travelville</a>
+
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#search">Search</a></li>
+              <li><a href="#popular">Popular</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#search">Search</a></li>
+      <li><a href="#popular">Popular</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Slider -->
+
+    <section class="slider">
+      <ul class="slides">
+        <li>
+          <img src="images/image (1).jpg" />
+          <div class="caption center-align">
+            <h2>The vication will never forget</h2>
+            <p
+              class="light grey-text text-lighten-3 flow-text hid-on-small-only"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+              architecto eveniet enim eius molestiae voluptas eos quae possimus
+              aliquam eaque quibusdam pariatur eum labore, dolorem deserunt
+              blanditiis animi veniam aut!
+            </p>
+            <a href="#" class="btn btn-large">Learn More</a>
+          </div>
+        </li>
+        <li>
+          <img src="images/image (2).jpg" />
+          <div class="caption left-align">
+            <h2>We Work With All Budget</h2>
+            <p
+              class="light grey-text text-lighten-3 flow-text hid-on-small-only"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+              architecto eveniet enim eius molestiae voluptas eos quae possimus
+              aliquam eaque quibusdam pariatur eum labore, dolorem deserunt
+              blanditiis animi veniam aut!
+            </p>
+            <a href="#" class="btn btn-large">Learn More</a>
+          </div>
+        </li>
+        <li>
+          <img src="images/image (3).jpg" />
+          <div class="caption right-align">
+            <h2>Group & Individual Getaways</h2>
+            <p
+              class="light grey-text text-lighten-3 flow-text hid-on-small-only"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+              architecto eveniet enim.
+            </p>
+            <a href="#" class="btn btn-large">Learn More</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section teal darken-3 white-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h3>
+              Search Destinations
+              <i class="material-icons small">search</i>
+            </h3>
+            <div class="input-field">
+              <input type="text" class="white black-text autocomplete" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icon Boxes -->
+    <section class="section-icons grey lighten-4 center">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="card-panel">
+              <i class="material-icons large teal-text">room</i>
+              <h4>Pick Where</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
+                ducimus.
+              </p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card-panel">
+              <i class="material-icons large teal-text">store</i>
+              <h4>Travel Shop</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam, harum?
+              </p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card-panel">
+              <i class="material-icons large teal-text">airplanemode_active</i>
+              <h4>Fly Cheap</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                debitis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Side navbar
+        $(".sidenav").sidenav();
+        console.log("Intialized");
+
+        //   Slider
+        $(".slider").slider({
+          height: 600,
+          indicators: false,
+        });
+
+        // Autocomplete
+        $("input.autocomplete").autocomplete({
+          data: {
+            Arube: null,
+            UK: null,
+            Australia: null,
+            Egypt: null,
+            Russia: null,
+            Apple: null,
+            Microsoft: null,
+            Google: "https://placehold.it/250x250",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
